@@ -6,8 +6,8 @@ from ogwwwplus.items import OgWwwPlusItem
 
 class WwwplusSpider(CrawlSpider):
 	name = "wwwplus"
-	allowed_domains = ["www.canalplus.fr","braquo.d8.tv","amazingrace.d8.tv"]
-	start_urls = ["http://www.canalplus.fr","http://braquo.d8.tv", "http://amazingrace.d8.tv/"]
+	allowed_domains = ["www.xxx.fr","yyy.zzz.tv","uuu.vvv.tv"]
+	start_urls = ["http://www.xxx.fr","http://yyy.zzz.tv", "http://uuu.vvv.tv/"]
 	rules = (
 		Rule(SgmlLinkExtractor(allow=('.*',),deny=('/breve\.ajax\.php','/compte\.ajax\.php','/programme\.ajax\.php','/ajax/', )), callback='parse_item', follow = True),
 	)
@@ -75,8 +75,8 @@ class StreetSpider(WwwplusSpider):
 	http_user = 'cstreet'
 	http_pass = 'cstreet!welcome'
 	name = "street"
-	allowed_domains = ["cstreet-staging.dev.area17.com"]
-	start_urls = ["http://cstreet-staging.dev.area17.com"]
+	allowed_domains = ["xxx.yyy.com"]
+	start_urls = ["http://xxx.yyy.com"]
 	rules = (
 		Rule(SgmlLinkExtractor(allow=('.*',),deny=('/admin/')), callback='parse_item', follow = True),
 	)
